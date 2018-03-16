@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1><span>Welcome to</span> Stripe</h1>
+            </div>
+
+            <div id="status">
+                <form action="stripe" method="POST">
+                    <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_MOAr94V6KBTh1qtMCIJfWQ4O"
+                            data-amount="999"
+                            data-name="Demo Site"
+                            data-description="Widget"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                            data-locale="auto"
+                            data-currency="eur">
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
